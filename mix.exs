@@ -8,7 +8,8 @@ defmodule Nest.Mixfile do
      elixir: "~> 1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps]
+     deps: deps,
+     package: package]
   end
 
   # Configuration for the OTP application
@@ -29,5 +30,13 @@ defmodule Nest.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     []
+  end
+
+  defp package do
+    %{
+      licenses: ["MIT"],
+      contributors: ["Adam Zaninovich"],
+      links: %{ "Github" => "https://github.com/adamzaninovich/nest" }
+    }
   end
 end
